@@ -31,7 +31,11 @@ namespace Jason {
     * The arrays will be checked for rectangularity.
     */
     constructor(grid: T[][]) {
-      // TODO: add error checking on width dimensions
+      let width = grid[0].length;
+      for(let row in grid) {
+        if(row.length != width)
+          throw "Non-rectangular grid";
+      }
       this.grid = grid;
     }
 

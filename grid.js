@@ -38,7 +38,11 @@ var Jason;
         function Grid(grid) {
             // Store a list of rows.
             this.grid = [];
-            // TODO: add error checking on width dimensions
+            var width = grid[0].length;
+            for (var row in grid) {
+                if (row.length != width)
+                    throw "Non-rectangular grid";
+            }
             this.grid = grid;
         }
         /**
