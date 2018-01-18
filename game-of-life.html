@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>The Game of Life</title>
+    <link rel="stylesheet" href="game-of-life.css">
+    <script src="jquery.js"></script>
+    <script src="grid.js"></script>
+    <script src="game-of-life.js"></script>
+    <script src="game-of-life-ui.js"></script>
+  </head>
+  <body>
+    <form>
+      Width: <input type="number" id="width" min="3" max="99" value="15"><br>
+      Height: <input type="number" id="height" min="3" max="99" value="15"><br>
+      Timeout (ms): <input type="number" id="ms" min="5" max="1000" value="200"><br>
+    </form>
+    <button id="iterate">Iterate</button>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <button id="clear">Clear</button>
+    <div id="table"></div>
+  </body>
+</html>
