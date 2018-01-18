@@ -32,8 +32,8 @@ namespace Jason {
     */
     constructor(grid: T[][]) {
       let width = grid[0].length;
-      for(let row in grid) {
-        if(row.length != width)
+      for(let y = 0; y < grid.length; y++) {
+        if(grid[y].length != width)
           throw "Non-rectangular grid";
       }
       this.grid = grid;
